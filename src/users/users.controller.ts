@@ -1,7 +1,10 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { get } from 'http';
 
-@Controller('users')
+@Controller({
+    version: '1',
+    path: 'users'
+})
 export class UsersController {
     @Get()
     getDefault(): string{
